@@ -12,5 +12,5 @@ class Option:
             "type": self.type,
             "description": self.description,
             "required": self.required,
-            "choices": self.choices
+            "choices": self.choices,
         }

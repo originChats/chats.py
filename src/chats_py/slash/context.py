@@ -12,7 +12,7 @@ class SlashContext:
             "response": content,
             "invoker": self.invoker,
             "channel": self.channel,
-            "ephemeral": ephemeral if ephemeral is not None else self.command.ephemeral
+            "ephemeral": ephemeral if ephemeral is not None else self.command.ephemeral,
         }
 
         await self.client.gateway.send(payload)

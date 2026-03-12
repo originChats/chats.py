@@ -1,5 +1,33 @@
 # chats.py
-A python wrapper for writing bots for originchats.mistium.com
+
+A Python wrapper for writing bots for originchats.mistium.com.
+
+## Install
+
+For local development:
+
+```bash
+python -m pip install -e .
+```
+
+Published/install name:
+
+```bash
+pip install chats.py
+```
 
 ## Usage
-Set up .env variables by copying `./.env.example` and renaming it `.env`. Fill out the variables required
+
+1. Copy `.env.example` to `.env`.
+2. Fill in the required bot credentials.
+3. Run one of the examples:
+
+```bash
+python examples/addBot.py
+```
+
+Example imports use the package directly:
+
+```python
+from chats_py import Client, Option
+```

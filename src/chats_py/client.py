@@ -1,6 +1,8 @@
 import asyncio
-from gateway import Gateway
-from slash.registry import SlashRegistry
+
+from .gateway import Gateway
+from .slash.registry import SlashRegistry
+
 
 class Client:
     def __init__(self, user=None, password=None):
@@ -24,13 +26,13 @@ class Client:
 
         if cmd == "ready":
             await self.on_ready(payload)
-        
+
         if cmd == "slash_call":
             await self.slash.handle_call(payload)
 
         elif cmd in self._events:
             await self._events[cmd](payload)
-            
+
         print(payload)
 
     async def on_ready(self, payload):

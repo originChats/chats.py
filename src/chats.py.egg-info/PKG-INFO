@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: chats.py
+Version: 0.1.0
+Summary: A Python wrapper for writing bots for originchats.mistium.com
+License: MIT License
+        
+        Copyright (c) 2026 originChats
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: websockets
+Dynamic: license-file
+
+# chats.py
+
+A Python wrapper for writing bots for originchats.mistium.com.
+
+## Install
+
+For local development:
+
+```bash
+python -m pip install -e .
+```
+
+## Usage
+
+1. Copy `.env.example` to `.env`.
+2. Fill in the required bot credentials.
+3. Run one of the examples:
+
+```bash
+python examples/addBot.py
+```
+
+Example imports use the package directly:
+
+```python
+from chats_py import Client, Option
+```

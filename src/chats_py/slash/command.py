@@ -1,5 +1,14 @@
 class SlashCommand:
-    def __init__(self, callback, name, description, options=None, whitelist=None, blacklist=None, ephemeral=False):
+    def __init__(
+        self,
+        callback,
+        name,
+        description,
+        options=None,
+        whitelist=None,
+        blacklist=None,
+        ephemeral=False,
+    ):
         self.callback = callback
         self.name = name
         self.description = description
@@ -15,5 +24,5 @@ class SlashCommand:
             "options": [opt.to_dict() for opt in self.options],
             "whitelistRoles": self.whitelistRoles,
             "blacklistRoles": self.blacklistRoles,
-            "ephemeral": self.ephemeral
+            "ephemeral": self.ephemeral,
         }

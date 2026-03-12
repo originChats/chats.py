@@ -1,15 +1,10 @@
-import asyncio
-import sys
-from pathlib import Path
 import os
+
 from dotenv import load_dotenv
+
+from chats_py import Client, Option
+
 load_dotenv()
-
-# Allow running this file directly: "python examples/addBot.py"
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
-from client import Client
-from slash.option import Option
 
 bot = Client(user=os.getenv("BOT_ACCOUNT_NAME"), password=os.getenv("BOT_ACCOUNT_PASSWORD"))
 

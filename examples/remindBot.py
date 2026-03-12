@@ -1,15 +1,11 @@
 import asyncio
-import sys
-from pathlib import Path
 import os
+
 from dotenv import load_dotenv
-load_dotenv() 
 
-# Allow running this file directly: "python examples/reminderBot.py"
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from chats_py import Client, Option
 
-from client import Client
-from slash.option import Option
+load_dotenv()
 
 bot = Client(user=os.getenv("BOT_ACCOUNT_NAME"), password=os.getenv("BOT_ACCOUNT_PASSWORD"))
 

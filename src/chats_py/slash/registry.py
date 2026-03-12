@@ -1,6 +1,7 @@
 from .command import SlashCommand
 from .context import SlashContext
 
+
 class SlashRegistry:
     def __init__(self, client):
         self.client = client
@@ -11,14 +12,15 @@ class SlashRegistry:
             cmd = SlashCommand(callback=func, **kwargs)
             self.commands[cmd.name] = cmd
             return func
+
         return decorator
 
     async def register_all(self):
         payload = {
             "cmd": "slash_register",
-            "commands": [cmd.to_dict() for cmd in self.commands.values()]
+            "commands": [cmd.to_dict() for cmd in self.commands.values()],
         }
-        print('registering commands:', payload)
+        print("registering commands:", payload)
         await self.client.gateway.send(payload)
 
     async def handle_call(self, payload):
@@ -34,7 +36,7 @@ class SlashRegistry:
             command=command,
             args=args,
             invoker=payload.get("invoker"),
-            channel=payload.get("channel")
+            channel=payload.get("channel"),
         )
 
         await command.callback(ctx)
