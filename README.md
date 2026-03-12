@@ -1,6 +1,6 @@
 # chats.py
 
-A Python wrapper for writing bots for originchats.mistium.com.
+A Python wrapper for writing bots for originChats.
 
 ## Install
 
